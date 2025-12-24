@@ -1,0 +1,1011 @@
+:root{
+  --bg: #f3f5f7;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --red: #c62828;
+  --dark: #1f2937;
+  --card: #ffffff;
+  --radius: 18px;
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+body{ background: var(--bg); color: var(--text); }
+
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+/* TOP BAR */
+.topbar{
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.topbar-inner{
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  padding: 14px 0;
+  flex-wrap: wrap;
+}
+.topbar-item{
+  text-decoration:none;
+  color:#111827;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0.95;
+}
+.topbar-item:hover{ opacity: 1; }
+
+/* BUTTON */
+.btn{
+  border:none;
+  cursor:pointer;
+  background:#fff;
+  color:#111827;
+  padding:10px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.btn-light{
+  background: #fff;
+  color:#111827;
+}
+
+/* SPECIALS */
+.specials{
+  padding: 26px 0 18px;
+}
+.specials-grid{
+  display:grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* Base special card */
+.special{
+  border-radius: var(--radius);
+  position:relative;
+}
+
+/* Left big */
+.special-left{
+  background: var(--red);
+  min-height: 260px;
+  display:flex;
+  align-items: stretch;
+}
+.special-left-text{
+  padding: 28px;
+  color:#fff;
+  width: 55%;
+  z-index: 2;
+}
+.special-left-text h2{
+  font-size: 40px;
+  line-height: 0.95;
+  margin-bottom: 10px;
+}
+.special-left-text p{
+  font-size: 13px;
+  opacity: 0.95;
+  margin-bottom: 14px;
+}
+
+/* Right-side big image area */
+.special-left-media{
+  width: 45%;
+  background: url("./public/assets/iteration-1/special-pizza.png") center/cover no-repeat;
+  /* SEN EKLE: special-pizza.png */
+}
+
+/* bottom-left small pizza */
+.special-left-badge{
+  position:absolute;
+  left: 18px;
+  bottom: 14px;
+  width: 90px;
+  height: 90px;
+  border-radius: 999px;
+  background: url("./public/assets/iteration-1/special-mini-pizza.png") center/cover no-repeat;
+  /* SEN EKLE: special-mini-pizza.png */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+}
+
+/* Right column */
+.special-right{
+  display:flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Dark card */
+.special-dark{
+  background: #111827;
+  min-height: 120px;
+  padding: 18px;
+  display:flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+.special-dark-text{
+  color:#fff;
+}
+.special-dark-text h3{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.special-dark-media{
+  width: 140px;
+  height: 90px;
+  border-radius: 12px;
+  background: url("./public/assets/iteration-1/special-burger.png") center/contain no-repeat;
+  /* SEN EKLE: special-burger.png */
+}
+
+/* White card (kurye) */
+.special-white{
+  background: #fff;
+  min-height: 120px;
+  padding: 18px;
+  display:flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+.special-white-text h3{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.special-white-media{
+  width: 180px;
+  height: 95px;
+  border-radius: 12px;
+  background: url("./public/assets/iteration-1/special-kurye.png") center/contain no-repeat;
+  /* SEN EKLE: special-kurye.png */
+}
+.red{ color:#e11d48; }
+
+/* Section title */
+.section-title{
+  padding: 14px 0 10px;
+}
+.subtitle{
+  text-align:center;
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.section-title h2{
+  text-align:center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* PRODUCTS */
+.products{
+  padding: 18px 0 40px;
+}
+.products-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.product-card{
+  background: transparent;
+  text-align: center;
+}
+.product-img{
+  width: 220px;
+  object-fit: contain;
+  display:block;
+  margin: 0 auto 10px;
+}
+.product-name{
+  font-size: 16px;
+  margin-bottom: 10px;
+  color:#111827;
+}
+.product-meta{
+  display:flex;
+  justify-content: center;
+  gap: 18px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.price{
+  color:#111827;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .specials-grid{
+    grid-template-columns: 1fr;
+  }
+  .products-grid{
+    grid-template-columns: 1fr;
+  }
+  .product-img{
+    width: 100%;
+    height: 100%;
+    max-width: 85vw;
+    height:auto !important
+  }
+}
+.container{
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.topbar-inner{
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  padding:14px 0;
+  flex-wrap:wrap;
+}
+
+.topbar-item{
+  text-decoration:none;
+  color:#111827;
+  font-size:13px;
+}
+
+.section-title{
+  text-align:center;
+  margin-top:16px;
+}
+
+.subtitle{
+  font-size:12px;
+  color:#c62828;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.title-box{
+  margin:10px auto;
+  max-width:980px;
+  border:2px solid rgba(0,0,0,.18);
+  border-radius:10px;
+  padding:14px;
+}
+
+.mini-menu{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  margin-top:10px;
+}
+
+.mini-item{
+  font-size:13px;
+  color:#6b7280;
+  text-decoration:none;
+}
+
+.mini-item.active{
+  background:#111827;
+  color:#fff;
+  padding:6px 12px;
+  border-radius:999px;
+}
+/* Genel sıfırlama */
+body { margin: 0; }
+
+header.header{
+  height: 100vh;          /* tam ekran */
+  min-height: 600px;      /* küçük ekranda da sığsın */
+  padding: 0 60px;
+  box-sizing: border-box;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  overflow: visible;       /* taşan yazıyı kesmesin diye düzenli dursun */
+}
+
+header.header .hero{
+  max-width: 520px;
+  margin-top: 40px;       /* üstten biraz aşağı indir */
+}
+
+header.header .hero h1{
+  font-size: 64px;
+  line-height: 1.05;
+  margin: 0 0 12px;
+}
+
+/* tablet / laptop küçükse yazıyı küçült */
+@media (max-width: 1024px){
+  header.header .hero h1{ font-size: 48px; }
+}
+
+/* mobil */
+@media (max-width: 768px){
+  header.header{ padding: 0 24px; min-height: 520px; }
+  header.header .hero h1{ font-size: 36px; }
+}
+header.header{
+  background-image: url("./public/assets/iteration-1/home-banner.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+/* =========================
+   MOBILE – 768px ve altı
+   ========================= */
+@media (max-width: 768px) {
+
+  /* HERO */
+  header.header{
+    height: auto;
+    min-height: 520px;
+    padding: 32px 20px;
+    background-position: center top;
+  }
+
+  header.header .hero{
+    max-width: 100%;
+    margin-top: 60px;
+  }
+
+  header.header .hero h1{
+    font-size: 36px;
+    line-height: 1.1;
+  }
+
+  header.header .hero p{
+    font-size: 16px;
+  }
+
+  header.header .hero button{
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  /* TOPBAR */
+  .topbar{
+    overflow-x: auto;
+  }
+
+  .topbar-inner{
+    display: flex;
+    gap: 16px;
+    padding: 10px 16px;
+    white-space: nowrap;
+  }
+
+  .topbar-item{
+    font-size: 14px;
+  }
+
+  /* SPECIALS */
+  .specials-grid{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .special-left,
+  .special-right{
+    width: 100%;
+  }
+
+  /* PRODUCTS */
+  .products-grid{
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+@media (max-width: 768px) {
+
+  header.header{
+    position: relative;
+    height: auto;
+    min-height: 520px;
+    padding: 24px 20px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  /* Yazıları öne al */
+  header.header .hero{
+    position: relative;
+    z-index: 2;
+    margin-top: 40px;
+  }
+
+  header.header .hero h1{
+    font-size: 34px;
+    line-height: 1.1;
+  }
+
+  /* Büyük üst sloganı (KOD ACIKTIRIR...) mobilde küçült */
+  header.header h2,
+  header.header .hero-title{
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  /* Arka plandaki pizza/görsel öne binmesin */
+  header.header img,
+  header.header .decor,
+  header.header .bg-image{
+    z-index: 1;
+    max-width: 100%;
+  }
+}
+/* =========================
+   MOBILE HERO RESET
+   ========================= */
+@media (max-width: 768px) {
+
+  header.header{
+    height: auto;
+    min-height: 100vh;
+    padding: 24px 16px;
+    display: block;
+  }
+
+  header.header .hero{
+    position: static;          /* absolute iptal */
+    display: flex;
+    flex-direction: column;    /* alt alta */
+    align-items: flex-start;
+    gap: 12px;                 /* yazılar arası boşluk */
+    max-width: 100%;
+    margin-top: 40px;
+    z-index: 2;
+  }
+
+  header.header .hero *{
+    position: static !important; /* TÜM yazıları normale döndür */
+  }
+
+  header.header h1{
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  header.header h2{
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  header.header p{
+    font-size: 15px;
+  }
+
+  header.header button{
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+@media (max-width: 768px){
+
+  /* Hero içindeki her şeyi normale çek */
+  header.header{
+    position: relative;
+  }
+
+  header.header *{
+    position: static !important;
+  }
+
+  /* Desktop için eklenmiş büyük sloganları mobilde kapat */
+  header.header h2,
+  header.header h3,
+  header.header .slogan,
+  header.header .hero-title,
+  header.header .big-title,
+  header.header .banner-title{
+    display: none !important;
+  }
+
+  /* Sadece ana başlık + kısa yazı + buton kalsın */
+  header.header .hero{
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 40px;
+    z-index: 2;
+  }
+
+  header.header .hero h1{
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  header.header .hero button{
+    width: 100%;
+  }
+}
+@media (max-width: 768px){
+  header.header a,
+  header.header button{
+    max-width: 100%;
+  }
+}
+/* =========================
+   MOBILE: HEADER FULL WIDTH FIX
+   ========================= */
+@media (max-width: 768px){
+
+  /* header her zaman tam ekran genişliği olsun */
+  header.header{
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+
+    min-height: 100vh !important;
+    padding: 28px 18px !important;
+
+    background-size: cover !important;
+    background-position: center top !important;
+    border-radius: 0 !important;
+  }
+
+  /* Hero metinleri ortalı ve okunur */
+  header.header .hero{
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+
+  header.header .hero h1{
+    font-size: 34px !important;
+    line-height: 1.15 !important;
+  }
+
+  header.header .hero p{
+    font-size: 15px !important;
+  }
+
+  header.header .hero button,
+  header.header .hero a{
+    width: 100% !important;
+    display: inline-block !important;
+    text-align: center !important;
+  }
+
+  /* Eğer header bir container içine sıkışıyorsa onu da aç */
+  .container{
+    width: 100% !important;
+    max-width: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+@media (max-width: 768px){
+  header.header{
+    width: 100vw !important;
+    max-width: 100vw !important;
+
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+}
+/* =========================
+   MOBILE HERO – FINAL FIX
+   ========================= */
+@media (max-width: 768px){
+
+  /* Desktop hero karmaşasını kapat */
+  header.header h2,
+  header.header .big-title,
+  header.header .banner-title,
+  header.header .desktop-only,
+  header.header .white-bar{
+    display: none !important;
+  }
+
+  /* Header */
+  header.header{
+    min-height: 100vh;
+    padding: 32px 20px;
+    background-position: center top;
+  }
+
+  /* Mobil hero */
+  header.header .hero{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 40px;
+  }
+
+  header.header .hero h1{
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  header.header .hero p{
+    font-size: 15px;
+  }
+
+  header.header .hero button{
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+}
+/* =========================
+   MOBILE: DESKTOP HERO KAPAT
+   ========================= */
+@media (max-width: 768px){
+
+  /* Desktop için absolute yazılan HER ŞEYİ kapat */
+  header.header .banner,
+  header.header .banner-text,
+  header.header .banner-title,
+  header.header .big-title,
+  header.header .desktop-hero,
+  header.header .hero-desktop,
+  header.header .slogan,
+  header.header h2{
+    display: none !important;
+  }
+
+  /* Mobil hero SADE ve NORMAL */
+  header.header{
+    min-height: 100vh;
+    padding: 32px 20px;
+  }
+
+  header.header .hero{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px;
+    margin-top: 40px;
+  }
+
+  header.header .hero h1{
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  header.header .hero p{
+    font-size: 15px;
+  }
+
+  header.header .hero button,
+  header.header .hero a{
+    width: 100%;
+  }
+}
+.special-dark-media{
+  outline:2px solid red;  
+
+}
+special-dark-media{
+  opacity: 1 !important;
+  filter: none !important;
+  background-size: contain !important;
+  background-color: transparent !important;
+}
+.special-dark{
+  background-color: #1f2937; /* koyu ama öldürmeyen */
+}
+/* header burger çıkmasın (varsa) */
+.hero-burger{ display:none !important; }
+
+/* Burger en altta */
+.bottom-burger{
+  display:block;
+  width: min(460px, 92%);
+  height:auto;
+  margin: 40px auto 10px;
+}
+
+/* Banner üstündeki yazıyı (Teknolojik Yemekler) fırsatı kaçırma üstüne taşı */
+header.header{ position: relative; }
+
+header.header .hero{
+  /* bannerın ortasına getiriyoruz */
+  position: absolute;
+  top: 120px;              /* gerekirse 100-150 arası oynatacağız */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  max-width: 520px;
+  width: 90%;
+}
+
+/* Buton taşmasın */
+header.header .hero button{
+  max-width: 320px;
+  width: 100%;
+}
+
+/* Mobilde daha yukarı */
+@media (max-width: 768px){
+  header.header .hero{
+    top: 95px;
+    width: 92%;
+  }
+}
+/* HEADER RESET – HER ŞEYİ TOPARLAR */
+header.header{
+  position: relative;
+  min-height: 100vh;
+  background-image: url("./public/assets/iteration-1/home-banner.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* HERO NORMAL AKIŞ */
+header.header .hero{
+  max-width: 320px;
+  background: #c62828;
+  color: #fff;
+  padding: 24px;
+  border-radius: 16px;
+}
+
+/* BUTON */
+header.header .hero button{
+  margin-top: 12px;
+  width: 100%;
+}
+
+/* HEADER'DAKİ TÜM BURGERLARI KAPAT */
+header.header img{
+  display: none !important;
+}
+
+/* EN ALTTAKİ BURGER */
+.bottom-burger{
+  display: block;
+  width: 90%;
+  max-width: 420px;
+  margin: 40px auto;
+  }
+ 
+
+.bottom-burger{
+  display:block;
+  width: 100%;
+  max-width: 420px;
+  margin: 80px auto 0;   /* ürünlerden net ayrılır */
+  position: relative;    /* ASLA fixed / absolute DEĞİL */
+  z-index: 1;
+}
+
+/* Mobilde de en altta kalsın ama küçük olsun */
+@media (max-width: 768px){
+  .bottom-burger{
+    max-width: 300px;
+    margin-top: 40px;
+  }
+}
+/* HEADER SADECE BANNER */
+header.header{
+  min-height: 520px;
+  background-image: url("./public/assets/iteration-1/home-banner.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Banner altındaki metin – güvenli alan */
+.hero-text{
+  background: #fff;
+  padding: 24px 18px;
+  text-align: center;
+}
+
+.hero-text h1{
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.hero-text button{
+  margin-top: 10px;
+}
+header.header{
+  position: relative;
+  min-height: 520px;
+  background-image: url("./public/assets/iteration-1/home-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 55%;
+  background-position-x: 50%;
+  background-position-y: center;
+}
+
+/* Banner üstündeki kart */
+header.header .hero-text{
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: min(520px, 92%);
+  background: rgba(255,255,255,0.92);
+  padding: 18px 16px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+header.header .hero-text button{
+  margin-top: 10px;
+}
+/* === HERO TEXT FINAL FIX === */
+header.header{
+  position: relative;
+}
+
+header.header .hero-text{
+  position: absolute !important;
+  top: 16px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+
+  width: calc(100% - 32px) !important;
+  max-width: 360px !important;
+
+  background: rgba(255,255,255,0.95) !important;
+  padding: 16px !important;
+  border-radius: 16px !important;
+
+  text-align: center !important;
+  box-sizing: border-box !important;
+}
+
+/* Yazılar */
+header.header .hero-text h1{
+  font-size: 22px !important;
+  margin-bottom: 6px !important;
+}
+
+header.header .hero-text p{
+  font-size: 14px !important;
+}
+
+/* Buton */
+header.header .hero-text button{
+  margin-top: 8px !important;
+  width: 100% !important;
+}
+/* Hero kartında sadece başlık kalsın */
+header.header .hero-text p,
+header.header .hero-text button{
+  display: none !important;
+}
+/* Beyaz kutuyu kaldır */
+header.header .hero-text{
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Başlık siyah ve net kalsın */
+header.header .hero-text h1{
+  color: #000 !important;
+}
+
+header.header{
+  position: relative;
+  min-height: 520px;
+
+  background-image: url("./public/assets/iteration-1/home-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+.header { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slogan {  
+  text-align: center;
+  margin: 0 auto; 
+}
+.hero-content {  
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+ }
+/* PRODUCTS - TEMİZ VE GARANTİ */
+.products-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  justify-items: center;
+}
+
+.product-card{
+  text-align: center;
+  overflow: visible;
+}
+
+.product-img{
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px){
+  .products-grid{ grid-template-columns: 1fr; }
+  .product-img{ max-width: 85vw; }
+}
+/* BURGER KESİLMEYİ %100 BİTİR */
+.product-img{
+  height: auto !important;
+  max-height: none !important;
+  width: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+.product-card, .products, .products-grid{
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
+}
+/* MOBİLDE SCROLL KİLİDİNİ KIR (burgerin altı görünsün) */
+html, body{
+  height: auto !important;
+  min-height: 100% !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+/* ürün bölümü asla kırpmasın */
+.products, .products-grid, .product-card{
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
+}
+/* 🔴 ÜRÜN KARTLARINI NORMALE ZORLA */
+.products,
+.products-grid,
+.product-card{
+  position: static !important;
+  transform: none !important;
+  margin-bottom: 48px !important;
+}
+
+/* 🔴 BURGER RESMİ ALTTA KESİLMEZ */
+.product-img{
+  display: block !important;
+  position: static !important;
+  transform: none !important;
+  margin-bottom: 24px !important;
+}
+
+/* 🔴 SAYFA ALTINI AÇ */
+body{
+  padding-bottom: 120px !important;
+}
