@@ -1,0 +1,405 @@
+:root{
+  --bg: #f3f5f7;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --red: #c62828;
+  --dark: #1f2937;
+  --card: #ffffff;
+  --radius: 18px;
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+body{ background: var(--bg); color: var(--text); }
+
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+/* TOP BAR */
+.topbar{
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.topbar-inner{
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  padding: 14px 0;
+  flex-wrap: wrap;
+}
+.topbar-item{
+  text-decoration:none;
+  color:#111827;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0.95;
+}
+.topbar-item:hover{ opacity: 1; }
+
+/* BUTTON */
+.btn{
+  border:none;
+  cursor:pointer;
+  background:#fff;
+  color:#111827;
+  padding:10px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.btn-light{
+  background: #fff;
+  color:#111827;
+}
+
+/* SPECIALS */
+.specials{
+  padding: 26px 0 18px;
+}
+.specials-grid{
+  display:grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* Base special card */
+.special{
+  border-radius: var(--radius);
+  position:relative;
+}
+
+/* Left big */
+.special-left{
+  background: var(--red);
+  min-height: 260px;
+  display:flex;
+  align-items: stretch;
+}
+.special-left-text{
+  padding: 28px;
+  color:#fff;
+  width: 55%;
+  z-index: 2;
+}
+.special-left-text h2{
+  font-size: 40px;
+  line-height: 0.95;
+  margin-bottom: 10px;
+}
+.special-left-text p{
+  font-size: 13px;
+  opacity: 0.95;
+  margin-bottom: 14px;
+}
+
+/* Right-side big image area */
+.special-left-media{
+  width: 45%;
+  background: url("./public/assets/iteration-1/special-pizza.png") center/cover no-repeat;
+  /* SEN EKLE: special-pizza.png */
+}
+
+/* bottom-left small pizza */
+.special-left-badge{
+  position:absolute;
+  left: 18px;
+  bottom: 14px;
+  width: 90px;
+  height: 90px;
+  border-radius: 999px;
+  background: url("./public/assets/iteration-1/special-mini-pizza.png") center/cover no-repeat;
+  /* SEN EKLE: special-mini-pizza.png */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+}
+
+/* Right column */
+.special-right{
+  display:flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Dark card */
+.special-dark{
+  background: #111827;
+  min-height: 120px;
+  padding: 18px;
+  display:flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+.special-dark-text{
+  color:#fff;
+}
+.special-dark-text h3{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.special-dark-media{
+  width: 140px;
+  height: 90px;
+  border-radius: 12px;
+  background: url("./public/assets/iteration-1/special-burger.png") center/contain no-repeat;
+  /* SEN EKLE: special-burger.png */
+}
+
+/* White card (kurye) */
+.special-white{
+  background: #fff;
+  min-height: 120px;
+  padding: 18px;
+  display:flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+.special-white-text h3{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.special-white-media{
+  width: 180px;
+  height: 95px;
+  border-radius: 12px;
+  background: url("./public/assets/iteration-1/special-kurye.png") center/contain no-repeat;
+  /* SEN EKLE: special-kurye.png */
+}
+.red{ color:#e11d48; }
+
+/* Section title */
+.section-title{
+  padding: 14px 0 10px;
+}
+.subtitle{
+  text-align:center;
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.section-title h2{
+  text-align:center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* PRODUCTS */
+.products{
+  padding: 18px 0 40px;
+}
+.products-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.product-card{
+  background: transparent;
+  text-align: center;
+}
+.product-img{
+  width: 220px;
+  object-fit: contain;
+  display:block;
+  margin: 0 auto 10px;
+}
+.product-name{
+  font-size: 16px;
+  margin-bottom: 10px;
+  color:#111827;
+}
+.product-meta{
+  display:flex;
+  justify-content: center;
+  gap: 18px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.price{
+  color:#111827;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .specials-grid{
+    grid-template-columns: 1fr;
+  }
+  .products-grid{
+    grid-template-columns: 1fr;
+  }
+  .product-img{
+    width: 100%;
+    height: 100%;
+    max-width: 85vw;
+    height:auto !important
+  }
+}
+.container{
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.topbar-inner{
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  padding:14px 0;
+  flex-wrap:wrap;
+}
+
+.topbar-item{
+  text-decoration:none;
+  color:#111827;
+  font-size:13px;
+}
+
+.section-title{
+  text-align:center;
+  margin-top:16px;
+}
+
+.subtitle{
+  font-size:12px;
+  color:#c62828;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.title-box{
+  margin:10px auto;
+  max-width:980px;
+  border:2px solid rgba(0,0,0,.18);
+  border-radius:10px;
+  padding:14px;
+}
+
+.mini-menu{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  margin-top:10px;
+}
+
+.mini-item{
+  font-size:13px;
+  color:#6b7280;
+  text-decoration:none;
+}
+
+.mini-item.active{
+  background:#111827;
+  color:#fff;
+  padding:6px 12px;
+  border-radius:999px;
+}
+/* ===============================
+   HOME HERO – TEMİZ FINAL
+================================= */
+
+.homeHero{
+  min-height: 100vh;
+  width: 100%;
+
+  background-color: #CE2829;
+  background-image: url("/assets/iteration-1/aci-pizza.png");
+  background-repeat: no-repeat;
+
+  /* 🔥 Pizzayı aşağı itiyoruz */
+  background-size: 750px;
+  background-position: center 150%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  text-align: center;
+  padding-top: 110px;
+  gap: 20px;
+}
+.homeHero{
+  min-height: 100vh;
+  width: 100%;
+
+  background-color: #CE2829;
+  background-image: url("/assets/iteration-1/aci-pizza.png");
+  background-repeat: no-repeat;
+
+  /* 🔥 Pizzayı aşağı itiyoruz */
+  background-size: 750px;
+  background-position: center 150%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  text-align: center;
+  padding-top: 110px;
+  gap: 20px;
+}
+
+/* İçerik alanı */
+.homeHeroInner{
+  width: min(560px, 92%);
+  margin: 0 auto;
+}
+
+/* Üst küçük yazı */
+.homeHeroEyebrow{
+  display: block;
+  color: #FDC913;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Başlık */
+.homeHeroTitle{
+  margin: 0;
+  color: #fff;
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 800;      /* 🔥 kalın yaptık */
+  letter-spacing: 1px;
+}
+
+/* Buton */
+.homeHeroBtn{
+  background: #FDC913;
+  color: #292929;
+  border: 0;
+  border-radius: 999px;
+  padding: 14px 42px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.homeHeroBtn:hover{
+  transform: scale(1.05);
+}
+
+/* MOBİL */
+@media (max-width: 768px){
+  .homeHero{
+    padding-top: 90px;
+    background-size: 520px;
+    background-position: center 115%;
+  }
+
+  .homeHeroTitle{
+    font-size: 36px;
+  }
+
+  .homeHeroBtn{
+    width: min(320px, 90%);
+  }
+}
